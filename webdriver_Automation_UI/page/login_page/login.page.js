@@ -41,6 +41,7 @@ class LoginPage extends BasePage {
     async loginValidUser() {
         const productHeader = await HomePage.productHeader;
 
+        await this.verifyLoginPage();
         await this.loginUser(process.env.STANDARD_USER, process.env.PASSWORD);
         await this.waitForElementToExist(productHeader);
         console.log("User successfully login");
@@ -49,6 +50,8 @@ class LoginPage extends BasePage {
 
     async loginLockOutUser() {
         const loginError = await this.loginError;
+
+        await this.verifyLoginPage();
         await this.loginUser(process.env.LOCKOUT_USER, process.env.PASSWORD);
         await this.waitForElementToExist(loginError);
     };
@@ -56,6 +59,7 @@ class LoginPage extends BasePage {
     async loginInvalidPassword() {
         const loginError = await this.loginError;
 
+        await this.verifyLoginPage();
         await this.loginUser(process.env.LOCKOUT_USER, process.env.INVALID_PASSWORD);
         await this.waitForElementToExist(loginError);
     };
