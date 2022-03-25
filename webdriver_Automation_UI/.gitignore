@@ -2,3 +2,5 @@ node_modules
 log-reports
 package-lock.json
 *.log
+*changelog
+*.html
