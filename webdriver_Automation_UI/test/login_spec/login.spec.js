@@ -6,7 +6,7 @@ describe('Sauce Demo Page - Login', async () => {
     before(async () => {
         await LoginPage.openLoginPage();
     });
-
+ 
     it('should be able to login using valid user credentials @smokeTest', async () => {
         await LoginPage.loginValidUser();
     });

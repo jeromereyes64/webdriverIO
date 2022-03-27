@@ -15,7 +15,7 @@ class HomePage extends BasePage {
         const loginHeader = await LoginPage.loginHeader;
 
         await this.clickElement(burgerBtn);
-        await this.clickElement(logoutBtn);
+        await browser.execute("arguments[0].click();", logoutBtn);
         await this.waitForElementToExist(loginHeader);
     };
 }
