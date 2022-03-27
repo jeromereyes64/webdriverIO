@@ -1,5 +1,4 @@
 import LoginPage from '../../page/login_page/login.page';
-import HomePage from '../../page/home_page/home.page';
 
 describe('Sauce Demo Page - Login', async () => {
     
