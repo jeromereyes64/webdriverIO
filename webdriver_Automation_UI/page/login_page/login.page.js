@@ -22,10 +22,12 @@ class LoginPage extends BasePage {
         const loginBtn = await this.loginBtn;
         const userPassword = await this.userPassword;
         const userName = await this.userName;
+        const loginHeader = await this.loginHeader;
 
         await this.waitForElementToExist(loginBtn);
         await this.waitForElementToExist(userPassword);
         await this.waitForElementToExist(userName);
+        await this.waitForElementToExist(loginHeader);
     };
 
     async loginUser(userNameValue,userPasswordValue) {
